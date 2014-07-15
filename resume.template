@@ -101,11 +101,15 @@
 						</span>
 					</p>
 					<p class="location text-right col-md-6">
+						{{#bio.email.personal}}
 						<span class="fa fa-envelope"></span>
 						{{bio.email.personal}}
+						{{/bio.email.personal}}
+						{{#bio.phone.personal}}
 						<br>
 						<span class="fa fa-phone"></span>
 						{{bio.phone.personal}}
+						{{/bio.phone.personal}}
 					</p>
 				</div>
 				<div class="col-md-12">
