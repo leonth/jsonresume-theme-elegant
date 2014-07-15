@@ -81,10 +81,6 @@
 							style="width: 150px; height: 150px;">
 				</div>
 				<div class="col-md-10">
-					<a class="btn btn-warning wip" href="https://github.com/mudassir0909/jsonresume-theme-elegant" target="_blank">
-						<span class="fa fa-github fa-lg"></span>
-						Work in progress
-					</a>			
 					<h1 class="name oswald-font">{{bio.firstName}} {{bio.lastName}}</h1>
 					<hr>
 					<p class="location text col-md-6">
