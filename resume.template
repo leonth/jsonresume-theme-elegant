@@ -142,7 +142,7 @@
 							<div class="item-detail">
 								<h3>
 									<span>{{position}}</span> 
-									<span class="pull-right">( {{startDate}} - {{endDate}} )</span>
+									<span class="pull-right">( {{startDate}}{{#endDate}} - {{endDate}}{{/endDate}} )</span>
 								</h3>
 								<h4>
 									<a target="_blank" href="{{website}}">
@@ -168,7 +168,7 @@
 							<div class="item-detail">
 								<h3>{{institution}}</h3>
 								<h4>{{area}}, {{studyType}}</h4>
-								<h5>{{startDate}} - {{endDate}}</h5>
+								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
 							</div>
 						{{/education}}
 					</div>
