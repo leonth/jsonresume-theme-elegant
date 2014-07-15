@@ -92,12 +92,30 @@
 						{{bio.location.city}}, {{bio.location.state}}, {{bio.location.countryCode}}
 						<br>
 						<span class="social-links-wrapper">
+							{{#bio.profiles.github}}
 							<a class="fa fa-github fa-2x social-link link-github" 
 								href="http://www.github.com/{{bio.profiles.github}}" target="_blank"></a>
+							{{/bio.profiles.github}}
+							{{#bio.profiles.twitter}}
 							<a class="fa fa-twitter fa-2x social-link link-twitter" 
 								href="http://www.twitter.com/{{bio.profiles.twitter}}" target="_blank"></a>
+							{{/bio.profiles.twitter}}
+							{{#bio.websites.linkedin}}
+							<a class="fa fa-linkedin fa-2x social-link link-linkedin" 
+								href="{{bio.websites.linkedin}}" target="_blank"></a>
+							{{/bio.websites.linkedin}}
+							{{#bio.profiles.facebook}}
+							<a class="fa fa-facebook fa-2x social-link link-facebook" 
+								href="http://www.facebook.com/{{bio.profiles.facebook}}" target="_blank"></a>
+							{{/bio.profiles.facebook}}
+							{{#bio.websites.blog}}
 							<a class="fa fa-rss fa-2x social-link link-blog" 
 								href="{{bio.websites.blog}}" target="_blank"></a>
+							{{/bio.websites.blog}}
+							{{#bio.websites.portfolio}}
+							<a class="fa fa-folder-open fa-2x social-link link-portfolio" 
+								href="{{bio.websites.portfolio}}" target="_blank"></a>
+							{{/bio.websites.portfolio}}
 						</span>
 					</p>
 					<p class="location text-right col-md-6">
