@@ -74,7 +74,7 @@
 		<div class="container">
 
 			<div class="col-md-10 col-md-offset-1">
-
+			<br>
 				<div class="col-md-2">
         				<img class="media-object img-circle pull-right" 
 							data-src="holder.js/64x64" alt="64x64" src="{{bio.gravatar}}"
@@ -161,7 +161,7 @@
 					</div>
 				</div>
 				<div class="col-md-12">
-					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Education</h2>
+					<h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2>
 					<hr>
 					<div class="col-md-10">			
 						{{#education}}
@@ -170,7 +170,47 @@
 								<h4>{{area}}, {{studyType}}</h4>
 								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
 							</div>
+							<ul>
+								{{#courses}}
+								<li>{{.}}</li>
+								{{/courses}}
+							</ul>
+							<hr>
 						{{/education}}
+					</div>
+				</div>
+				<div class="col-md-12">
+					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2>
+					<hr>
+					<div class="col-md-10">
+						{{#skills}}
+							<h4> {{name}} </h4>
+							<h5><b>{{level}}</b></h5>
+							{{#keywords}}
+								<span class="badge" style="background-color : #67809F;padding: 0.5em 0.5em 5px 0.5em;margin: 0 0 5px 0;">{{.}}</span> 
+							{{/keywords}}
+							<hr>
+						{{/skills}}
+					</div>
+				</div>
+				<br><br>
+				<div class="col-md-12">
+					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
+					<hr>
+					<div class="col-md-10">
+						<ul>
+							{{#hobbies}}
+								<li><div class="item-detail">
+									<h5>{{name}}</h5>
+								</div>
+								<ul>
+									{{#keywords}}
+									<li>{{.}}</li>
+									{{/keywords}}
+								</ul></li>
+							{{/hobbies}}
+						</ul>
+						<hr>
 					</div>
 				</div>
 			</div>
