@@ -1,26 +1,26 @@
 {
-  "name": "jsonresume-theme-elegant",
+  "name": "jsonresume-theme-elegant_fork",
   "version": "0.0.3",
-  "description": "Elegant theme for jsonresume",
+  "description": "Fork of Elegant theme for jsonresume",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant.git"
+    "url": "https://github.com/umrysh/jsonresume-theme-elegant.git"
   },
   "keywords": [
     "jsonresume",
     "theme",
-    "elegant"
+    "elegant_fork"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com>",
+  "author": "Mudassir Ali <mudassir.dev@gmail.com> and Dave Umrysh <http://www.umrysh.com/contact/>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/umrysh/jsonresume-theme-elegant/issues"
   },
-  "homepage": "https://github.com/mudassir0909/jsonresume-theme-elegant",
+  "homepage": "https://github.com/umrysh/jsonresume-theme-elegant",
   "dependencies": {
     "resume-schema": "0.0.11",
     "gravatar": "^1.0.6",
