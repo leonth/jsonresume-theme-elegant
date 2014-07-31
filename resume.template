@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{bio.firstName}} {{bio.lastName}}</title>
+		<title>{{basics.name}}</title>
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<style>
@@ -77,60 +77,45 @@
 			<br>
 				<div class="col-md-2">
         				<img class="media-object img-circle pull-right" 
-							data-src="holder.js/64x64" alt="64x64" src="{{bio.gravatar}}"
+							data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}"
 							style="width: 150px; height: 150px;">
 				</div>
 				<div class="col-md-10">
-					<h1 class="name oswald-font">{{bio.firstName}} {{bio.lastName}}</h1>
+					<h1 class="name oswald-font">{{basics.name}}</h1>
 					<hr>
 					<p class="location text col-md-6">
 						<span class="fa fa-location-arrow"></span>
-						{{bio.location.city}}, {{bio.location.state}}, {{bio.location.countryCode}}
+						{{#basics.location.address}}{{basics.location.address}}, {{/basics.location.address}}{{basics.location.city}}, {{basics.location.region}}, {{basics.location.countryCode}}{{#basics.location.postalCode}} {{basics.location.postalCode}}{{/basics.location.postalCode}}
 						<br>
 						<span class="social-links-wrapper">
-							{{#bio.profiles.github}}
-							<a class="fa fa-github fa-2x social-link link-github" 
-								href="http://www.github.com/{{bio.profiles.github}}" target="_blank"></a>
-							{{/bio.profiles.github}}
-							{{#bio.profiles.twitter}}
-							<a class="fa fa-twitter fa-2x social-link link-twitter" 
-								href="http://www.twitter.com/{{bio.profiles.twitter}}" target="_blank"></a>
-							{{/bio.profiles.twitter}}
-							{{#bio.websites.linkedin}}
-							<a class="fa fa-linkedin fa-2x social-link link-linkedin" 
-								href="{{bio.websites.linkedin}}" target="_blank"></a>
-							{{/bio.websites.linkedin}}
-							{{#bio.profiles.facebook}}
-							<a class="fa fa-facebook fa-2x social-link link-facebook" 
-								href="http://www.facebook.com/{{bio.profiles.facebook}}" target="_blank"></a>
-							{{/bio.profiles.facebook}}
-							{{#bio.websites.blog}}
-							<a class="fa fa-rss fa-2x social-link link-blog" 
-								href="{{bio.websites.blog}}" target="_blank"></a>
-							{{/bio.websites.blog}}
-							{{#bio.websites.portfolio}}
-							<a class="fa fa-folder-open fa-2x social-link link-portfolio" 
-								href="{{bio.websites.portfolio}}" target="_blank"></a>
-							{{/bio.websites.portfolio}}
+							{{#basics.profiles}}
+							<a href="{{url}}" target="_blank">{{network}}</a>&nbsp;&nbsp;
+							{{/basics.profiles}}
 						</span>
 					</p>
 					<p class="location text-right col-md-6">
-						{{#bio.email.personal}}
+						{{#basics.email}}
 						<span class="fa fa-envelope"></span>
-						{{bio.email.personal}}
-						{{/bio.email.personal}}
-						{{#bio.phone.personal}}
+						{{basics.email}}
+						{{/basics.email}}
+						{{#basics.phone}}
 						<br>
 						<span class="fa fa-phone"></span>
-						{{bio.phone.personal}}
-						{{/bio.phone.personal}}
+						{{basics.phone}}
+						{{/basics.phone}}
+						{{#basics.website}}
+						<br>
+						<span class="fa fa-rss-square"></span>
+						<a target="_blank" href="{{basics.website}}">{{basics.website}}</a>
+						{{/basics.website}}
+						<br>
 					</p>
 				</div>
 				<div class="col-md-12">
 					<hr>
 					<p class="summary">
 						<sup class="fa fa-quote-left"></sup>
-						{{bio.summary}}
+						{{basics.summary}}
 						<sup class="fa fa-quote-right"></sup>
 					</p>
 				</div>
@@ -168,6 +153,7 @@
 							<div class="item-detail">
 								<h3>{{institution}}</h3>
 								<h4>{{area}}, {{studyType}}</h4>
+								{{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
 								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
 							</div>
 							<ul>
@@ -193,13 +179,38 @@
 						{{/skills}}
 					</div>
 				</div>
-				<br><br>
+				<div class="col-md-12">
+					<h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h3>
+					<hr>
+					<div class="col-md-10">
+						{{#volunteer}}
+							<div class="item-detail">
+								<h3>
+									{{#website}}<a target="_blank" href="{{website}}">
+										@{{/website}}{{organization}} 
+									{{#website}}</a>{{/website}}
+								</h3>
+								{{#summary}}<p class="text-muted">{{summary}}</p>{{/summary}}
+								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
+								<h4>
+									{{#position}}<span>{{position}}</span>{{/position}}
+								</h4>
+							</div>
+							<ul>
+            					{{#highlights}}
+								<li>{{.}}</li>
+              					{{/highlights}}
+							</ul>
+							<hr>
+						{{/volunteer}}
+					</div>
+				</div>
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
 					<hr>
 					<div class="col-md-10">
 						<ul>
-							{{#hobbies}}
+							{{#interests}}
 								<li><div class="item-detail">
 									<h5>{{name}}</h5>
 								</div>
@@ -208,7 +219,7 @@
 									<li>{{.}}</li>
 									{{/keywords}}
 								</ul></li>
-							{{/hobbies}}
+							{{/interests}}
 						</ul>
 						<hr>
 					</div>

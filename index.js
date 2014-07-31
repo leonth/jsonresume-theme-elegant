@@ -44,6 +44,20 @@ function render (resumeObject) {
 		}
 	});
 
+	_.each(resumeObject.volunteer, function(volunteer_experience){
+		volunteer_experience.startDate = volunteer_experience.startDate.substr(0,4);
+		if (volunteer_experience.endDate && volunteer_experience.startDate){
+			if(volunteer_experience.endDate.substr(0,4)==volunteer_experience.startDate)
+			{
+				volunteer_experience.endDate = "";
+			}else{
+				volunteer_experience.endDate = volunteer_experience.endDate.substr(0,4);
+			}
+		}else{
+			volunteer_experience.endDate = 'Present';
+		}
+	});
+
 	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
 	var resumeHTML = Mustache.render(theme, resumeObject);
 	return resumeHTML;
