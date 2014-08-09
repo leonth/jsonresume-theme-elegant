@@ -1,26 +1,27 @@
 {
-  "name": "jsonresume-theme-elegant_fork",
+  "name": "jsonresume-theme-elegant_sargefork",
   "version": "0.0.3",
-  "description": "Fork of Elegant theme for jsonresume",
+  "description": "Fork of Elegant Fork theme for jsonresume",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umrysh/jsonresume-theme-elegant.git"
+    "url": "https://github.com/iammac360/jsonresume-theme-elegant"
   },
   "keywords": [
     "jsonresume",
     "theme",
-    "elegant_fork"
+    "elegant_fork",
+    "elegant_sargefork"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com> and Dave Umrysh <http://www.umrysh.com/contact/>",
+  "author": "Mark Sargento <marksargento.00@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/umrysh/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/iammac360/jsonresume-theme-elegant/issues"
   },
-  "homepage": "https://github.com/umrysh/jsonresume-theme-elegant",
+  "homepage": "https://github.com/iammac360/jsonresume-theme-elegant",
   "dependencies": {
     "resume-schema": "0.0.11",
     "gravatar": "^1.0.6",
