@@ -17,13 +17,13 @@ function render (resumeObject) {
 	}
 
 	_.each(resumeObject.work, function (work_experience) {
-		work_experience.startDate = work_experience.startDate.substr(0,4);
+		work_experience.startDate = work_experience.startDate;
 		if (work_experience.endDate && work_experience.startDate){
-			if(work_experience.endDate.substr(0,4)==work_experience.startDate)
+			if(work_experience.endDate==work_experience.startDate)
 			{
 				work_experience.endDate = "";
 			}else{
-				work_experience.endDate = work_experience.endDate.substr(0,4);
+				work_experience.endDate = work_experience.endDate;
 			}
 		}else{
 			work_experience.endDate = 'Present';
@@ -31,13 +31,13 @@ function render (resumeObject) {
 	});
 
 	_.each(resumeObject.education, function(education_experience){
-		education_experience.startDate = education_experience.startDate.substr(0,4);
+		education_experience.startDate = education_experience.startDate;
 		if (education_experience.endDate && education_experience.startDate){
-			if(education_experience.endDate.substr(0,4)==education_experience.startDate)
+			if(education_experience.endDate==education_experience.startDate)
 			{
 				education_experience.endDate = "";
 			}else{
-				education_experience.endDate = education_experience.endDate.substr(0,4);
+				education_experience.endDate = education_experience.endDate;
 			}
 		}else{
 			education_experience.endDate = 'Present';
@@ -45,13 +45,13 @@ function render (resumeObject) {
 	});
 
 	_.each(resumeObject.volunteer, function(volunteer_experience){
-		volunteer_experience.startDate = volunteer_experience.startDate.substr(0,4);
+		volunteer_experience.startDate = volunteer_experience.startDate;
 		if (volunteer_experience.endDate && volunteer_experience.startDate){
-			if(volunteer_experience.endDate.substr(0,4)==volunteer_experience.startDate)
+			if(volunteer_experience.endDate==volunteer_experience.startDate)
 			{
 				volunteer_experience.endDate = "";
 			}else{
-				volunteer_experience.endDate = volunteer_experience.endDate.substr(0,4);
+				volunteer_experience.endDate = volunteer_experience.endDate;
 			}
 		}else{
 			volunteer_experience.endDate = 'Present';
