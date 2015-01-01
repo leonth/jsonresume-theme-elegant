@@ -2,6 +2,7 @@ var fs = require('fs');
 var gravatar = require('gravatar');
 var Mustache = require('mustache');
 var _ = require('underscore');
+var moment = require('moment');
 
 function hasPersonalEmail(resumeObject) {
 	return (resumeObject.bio && resumeObject.bio.email && resumeObject.bio.email.personal);
@@ -16,47 +17,23 @@ function render (resumeObject) {
 		});
 	}
 
-	_.each(resumeObject.work, function (work_experience) {
-		work_experience.startDate = work_experience.startDate;
-		if (work_experience.endDate && work_experience.startDate){
-			if(work_experience.endDate==work_experience.startDate)
-			{
-				work_experience.endDate = "";
-			}else{
-				work_experience.endDate = work_experience.endDate;
-			}
-		}else{
-			work_experience.endDate = 'Present';
-		}
-	});
+	var humanizeDate = function (datestr) {
+		return moment(datestr).format("MMM YYYY");
+	}
 
-	_.each(resumeObject.education, function(education_experience){
-		education_experience.startDate = education_experience.startDate;
-		if (education_experience.endDate && education_experience.startDate){
-			if(education_experience.endDate==education_experience.startDate)
-			{
-				education_experience.endDate = "";
-			}else{
-				education_experience.endDate = education_experience.endDate;
-			}
-		}else{
-			education_experience.endDate = 'Present';
+	var processDates = function (node) {
+		if (!node.endDate) {
+			node.endDate = "present";
 		}
-	});
+		else {
+			node.endDate = humanizeDate(node.endDate);
+		}
+		node.startDate = humanizeDate(node.startDate);
+	};
 
-	_.each(resumeObject.volunteer, function(volunteer_experience){
-		volunteer_experience.startDate = volunteer_experience.startDate;
-		if (volunteer_experience.endDate && volunteer_experience.startDate){
-			if(volunteer_experience.endDate==volunteer_experience.startDate)
-			{
-				volunteer_experience.endDate = "";
-			}else{
-				volunteer_experience.endDate = volunteer_experience.endDate;
-			}
-		}else{
-			volunteer_experience.endDate = 'Present';
-		}
-	});
+	_.each(resumeObject.work, processDates);
+	_.each(resumeObject.education, processDates);
+	_.each(resumeObject.volunteer, processDates);
 
 	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
 	var resumeHTML = Mustache.render(theme, resumeObject);
