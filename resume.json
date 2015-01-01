@@ -1,0 +1,154 @@
+{
+  "awards": [
+    {
+      "awarder": "Pan Malayan",
+      "date": "2012-06-01",
+      "title": "Pan-Malayan Entrepreneurship Prize for Best Pharmaceutical Marketing Project"
+    },
+    {
+      "awarder": "Ministry of Foreign Affairs, Singapore",
+      "date": "2008-06-01",
+      "title": "Singapore Scholarship for Bachelor\u2019s Degree in Pharmacy"
+    },
+    {
+      "awarder": "Indonesia Information & Communication Technology Award",
+      "date": "2007-11-01",
+      "summary": "The project was an implementation of an informatics contest management / judging system, featuring online submission of source codes, compilation, and grading against predefined input/output scenarios.",
+      "title": "Winner, Student Project Category"
+    },
+    {
+      "awarder": "Indonesian National Science Olympiad, Informatics Category",
+      "date": "2005-09-01",
+      "title": "Silver Medallist"
+    }
+  ],
+  "basics": {
+    "email": "leontius@gmail.com",
+    "name": "Leontius Adhika Pradhana",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "http://sg.linkedin.com/in/leontius/"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/leonth",
+        "username": "leonth"
+      }
+    ],
+    "website": "http://leontius.net"
+  },
+  "education": [
+    {
+      "area": "Gateway to Health Informatics: an AMIA-OHSU i10x10 Course",
+      "endDate": "2014-07-14",
+      "institution": "American Medical Informatics Association",
+      "startDate": "2014-03-10",
+      "studyType": "Postgraduate Certificate"
+    },
+    {
+      "area": "Pharmacy",
+      "endDate": "2012-08-01",
+      "institution": "National University of Singapore",
+      "startDate": "2008-08-01",
+      "studyType": "Bachelor of Science (Pharmacy) (Honours)"
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Fluent",
+      "language": "English"
+    },
+    {
+      "fluency": "Native speaker",
+      "language": "Indonesian"
+    }
+  ],
+  "skills": [
+    {
+      "keywords": [
+        "Python",
+        "Java",
+        "PHP",
+        "Javascript",
+        "SQL",
+        "HTML",
+        "CSS",
+        "C",
+        "Pascal"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "Drupal",
+        "WordPress",
+        "Android",
+        "Apache Spark",
+        "IPython",
+        "pandas Python Data Analysis Library",
+        "Mercurial",
+        "Git",
+        "Docker"
+      ],
+      "name": "Software Technologies"
+    }
+  ],
+  "work": [
+    {
+      "company": "Jurong Health Services",
+      "highlights": [
+        "As Subject Matter Expert for pharmacy on implementation of the new integrated Electronic Medical Record, I work closely with stakeholders inside and outside pharmacy to define requirements, map workflows, produce requisite clinical and non-clinical content, and drive integration efforts with other systems.",
+        "Manages enhancements, bug fixes, and testing of the Electronic Medical Record at Alexandra Hospital.",
+        "Extracts data and performs analyses that drive business decisions and policy making of the department."
+      ],
+      "position": "Pharmacist (IT Portfolio)",
+      "startDate": "2013-03-01",
+      "summary": "I partake in the transitioning from legacy IT systems of the 400-bed Alexandra Hospital to modern systems of 700-bed Ng Teng Fong General Hospital and 400-bed Jurong Community Hospital. The new hospitals feature an integrated Electronic Medical Record across all care areas and Closed-Loop Medication Management where every dose of drugs is barcoded and scanned before administration.",
+      "website": "http://juronghealth.com.sg/"
+    },
+    {
+      "company": "Jurong Health Services",
+      "endDate": "2013-03-01",
+      "position": "Pre-registration Pharmacist",
+      "startDate": "2012-06-01",
+      "summary": "Training for pharmacy practising certificate.",
+      "website": "http://juronghealth.com.sg/"
+    },
+    {
+      "company": "Teamie",
+      "endDate": "2011-07-01",
+      "highlights": [
+        "Initiated and oversaw usage of Mercurial version control system for the engineering team."
+      ],
+      "position": "Software Developer Intern",
+      "startDate": "2011-04-01",
+      "summary": "Developed modules the Drupal-based core product, a cloud-based collaborative learning platform.",
+      "website": "https://theteamie.com/"
+    },
+    {
+      "company": "National University Hospital",
+      "endDate": "2011-07-01",
+      "position": "Pharmacy intern",
+      "startDate": "2011-05-01",
+      "summary": "Training for pharmacy practising certificate.",
+      "website": "http://www.nuh.com.sg/"
+    },
+    {
+      "company": "Google",
+      "endDate": "2010-07-01",
+      "position": "Google Summer of Code software developer",
+      "startDate": "2010-05-01",
+      "summary": "Selected to receive grant from Google among 1026 students globally to work on the project Reactome-Wikipathways Round-trip Converter which was successfully completed, enabling rapid interoperabilty between the organisations.",
+      "website": "https://developers.google.com/open-source/soc/"
+    },
+    {
+      "company": "NTUC Unity Healthcare",
+      "endDate": "2010-07-01",
+      "position": "Pharmacy intern",
+      "startDate": "2010-05-01",
+      "summary": "Training for pharmacy practising certificate.",
+      "website": "http://www.ntuchealth.com.sg"
+    }
+  ]
+}

@@ -6,8 +6,9 @@
 // `node serve`
 //
 
+var fs = require("fs");
 var http = require("http");
-var resume = require("resume-schema").resumeJson;
+//var resume = require("resume-schema").resumeJson;
 var theme = require("./index.js");
 
 var port = 8888;
@@ -23,6 +24,7 @@ console.log("Serving..");
 
 function render() {
     try {
+        var resume = JSON.parse(fs.readFileSync("resume.json"));
         return theme.render(resume);
     } catch (e) {
         console.log(e.message);
