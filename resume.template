@@ -125,7 +125,7 @@
 							<div class="item-detail">
 								<h3>
 									<span>{{position}}</span> 
-									<span class="small pull-right">{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</span>
+									<span class="small pull-right">{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</span>
 								</h3>
 								<h4>
 									<a target="_blank" href="{{website}}">
@@ -151,7 +151,7 @@
 							<div class="item-detail">
 								<h3>
 									<span>{{institution}}</span>
-									<span class="small pull-right">{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</span>
+									<span class="small pull-right">{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</span>
 								</h3>
 								<h4>{{area}}, {{studyType}}</h4>
 								{{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
@@ -194,7 +194,7 @@
 									{{#website}}</a>{{/website}}
 								</h3>
 								{{#summary}}<p class="text-muted">{{summary}}</p>{{/summary}}
-								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
+								<h5>{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</h5>
 								<h4>
 									{{#position}}<span>{{position}}</span>{{/position}}
 								</h4>
