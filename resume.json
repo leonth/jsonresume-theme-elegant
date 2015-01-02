@@ -24,6 +24,9 @@
   ],
   "basics": {
     "email": "leontius@gmail.com",
+    "location": {
+      "city": "Singapore"
+    },
     "name": "Leontius Adhika Pradhana",
     "profiles": [
       {

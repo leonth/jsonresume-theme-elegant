@@ -35,6 +35,16 @@ function render (resumeObject) {
 	_.each(resumeObject.education, processDates);
 	_.each(resumeObject.volunteer, processDates);
 
+	var locs = [];
+	if (resumeObject.basics.location) {
+		_.each(['address', 'city', 'region', 'postalCode', 'countryCode'], function(s) {
+			if (resumeObject.basics.location[s]) {
+				locs.push(resumeObject.basics.location[s]);
+			}
+		});
+	}
+	resumeObject.basics._humanized_location = locs.join(', ');
+
 	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
 	var resumeHTML = Mustache.render(theme, resumeObject);
 	return resumeHTML;
