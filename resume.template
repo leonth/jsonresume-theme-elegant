@@ -118,18 +118,18 @@
 				</div>
 				{{/basics.summary}}
 				<div class="col-md-12">
-					<h2 class="oswald-font"><span class="fa fa-building-o"></span>&nbsp; Work Experience</h3>
+					<h2 class="oswald-font"><span class="fa fa-building-o"></span>&nbsp; Work</h3>
 					<hr>
-					<div class="col-md-10">
+					<div>
 						{{#work}}
 							<div class="item-detail">
 								<h3>
 									<span>{{position}}</span> 
-									<span class="pull-right">( {{startDate}}{{#endDate}} - {{endDate}}{{/endDate}} )</span>
+									<span class="small pull-right">{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</span>
 								</h3>
 								<h4>
 									<a target="_blank" href="{{website}}">
-										@{{company}} 
+										{{company}} 
 									</a>
 								</h4>
 								<p class="text-muted">{{summary}}</p>
@@ -146,13 +146,15 @@
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2>
 					<hr>
-					<div class="col-md-10">			
+					<div>			
 						{{#education}}
 							<div class="item-detail">
-								<h3>{{institution}}</h3>
+								<h3>
+									<span>{{institution}}</span>
+									<span class="small pull-right">{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</span>
+								</h3>
 								<h4>{{area}}, {{studyType}}</h4>
 								{{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
-								<h5>{{startDate}}{{#endDate}} - {{endDate}}{{/endDate}}</h5>
 							</div>
 							<ul>
 								{{#courses}}
@@ -163,10 +165,11 @@
 						{{/education}}
 					</div>
 				</div>
+				{{#skills.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2>
 					<hr>
-					<div class="col-md-10">
+					<div>
 						{{#skills}}
 							<h4> {{name}} </h4>
 							<h5><b>{{level}}</b></h5>
@@ -177,10 +180,12 @@
 						{{/skills}}
 					</div>
 				</div>
+				{{/skills.0}}
+				{{#volunteer.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h3>
 					<hr>
-					<div class="col-md-10">
+					<div>
 						{{#volunteer}}
 							<div class="item-detail">
 								<h3>
@@ -203,6 +208,8 @@
 						{{/volunteer}}
 					</div>
 				</div>
+				{{/volunteer.0}}
+				{{#interests.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
 					<hr>
@@ -222,6 +229,7 @@
 						<hr>
 					</div>
 				</div>
+				{{/interests.0}}
 			</div>
 		</div>
 
