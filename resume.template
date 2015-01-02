@@ -209,6 +209,19 @@
 					</div>
 				</div>
 				{{/volunteer.0}}
+				{{#languages.0}}
+				<div class="col-md-12">
+					<h2 class="oswald-font"><span class="fa fa-language"></span>&nbsp; Languages</h2>
+					<hr>
+					<div>
+						{{#languages}}
+							<h4> {{language}} </h4>
+							<h5><b>{{fluency}}</b></h5>
+							<hr>
+						{{/languages}}
+					</div>
+				</div>
+				{{/languages.0}}
 				{{#interests.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
