@@ -6,12 +6,12 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{basics.name}}</title>
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" media="all">
 		<style>
 			body {
 				font-family: 'Lato';
 				background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/snow.png");
-        font-size: 'small'
+	        	font-size: 'small'
 			}
 
 			.oswald-font {
@@ -66,18 +66,42 @@
 			}
 			
 			.item-detail h3 {
-				margin-top: 0;
+				margin-top: 0px;
+				vertical-align: middle;
+			}
+
+			.item-detail .company {
+				font-size: 18px;
+			}
+
+			.item {
+				border-bottom: 1px solid #eee;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+			}
+
+			@media print {
+				a[href]:after {
+					content:"";
+				}
+				.badge {
+					font-weight: normal;
+				}
+				.item {
+					border-bottom: 0px;
+					margin-bottom: 0px;
+					padding-bottom: 5px;
+				}
 			}
 		</style>
 	</head>
 	
 	<body>
 		<div class="container">
-			<br>
 				<div class="col-md-12">
 					<h1 class="name oswald-font">{{basics.name}}</h1>
-					<hr>
-					<p class="location text col-md-6">
+					
+					<p class="location text col-xs-6">
 						{{#basics._humanized_location}}
 						<span class="fa fa-location-arrow"></span>
 						{{basics._humanized_location}}
@@ -89,7 +113,7 @@
 							{{/basics.profiles}}
 						</span>
 					</p>
-					<p class="location text-right col-md-6">
+					<p class="location text-right col-xs-6">
 						{{#basics.email}}
 						<span class="fa fa-envelope"></span>
 						{{basics.email}}
@@ -107,9 +131,10 @@
 						<br>
 					</p>
 				</div>
+
 				{{#basics.summary}}
 				<div class="col-md-12">
-					<hr>
+					
 					<p class="summary">
 						<sup class="fa fa-quote-left"></sup>
 						{{basics.summary}}
@@ -117,58 +142,79 @@
 					</p>
 				</div>
 				{{/basics.summary}}
+
 				<div class="col-md-12">
-					<h2 class="oswald-font"><span class="fa fa-building-o"></span>&nbsp; Work</h3>
-					<hr>
-					<div>
-						{{#work}}
-							<div class="item-detail">
-								<h3>
-									<span>{{position}}</span> 
-									<span class="small pull-right">{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</span>
-								</h3>
-								<h4>
-									<a target="_blank" href="{{website}}">
-										{{company}} 
-									</a>
-								</h4>
-								<p class="text-muted">{{summary}}</p>
-							</div>
+					<h2 class="oswald-font"><span class="fa fa-briefcase"></span>&nbsp; Work</h3>
+					
+					{{#work}}
+					<div class="row item">
+						<div class="col-xs-2 text-right">{{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}</div>
+						<div class="item-detail col-xs-10">
+							<h3>
+								{{position}} &bull; <a target="_blank" href="{{website}}" class="company">{{company}}</a>
+							</h3>
+							<p class="text-muted text-justify">{{summary}}</p>
 							<ul>
             					{{#highlights}}
-								<li>{{.}}</li>
+								<li class="text-justify">{{.}}</li>
               					{{/highlights}}
 							</ul>
-							<hr>
-						{{/work}}
+						</div>
+						
 					</div>
+					
+					{{/work}}
 				</div>
+
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2>
-					<hr>
-					<div>			
-						{{#education}}
-							<div class="item-detail">
-								<h3>
-									<span>{{institution}}</span>
-									<span class="small pull-right">{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</span>
-								</h3>
-								<h4>{{area}}, {{studyType}}</h4>
-								{{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
-							</div>
+					
+					{{#education}}
+					<div class="row item">
+						<div class="col-xs-2 text-right">{{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}</div>
+						<div class="item-detail col-xs-10">
+							<h3>{{studyType}}</h3>
+							<h4>{{institution}}, {{area}}</h4>
+							{{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
 							<ul>
-								{{#courses}}
-								<li>{{.}}</li>
-								{{/courses}}
+							{{#courses}}
+							<li>{{.}}</li>
+							{{/courses}}
 							</ul>
-							<hr>
-						{{/education}}
+						</div>
+						
 					</div>
+					{{/education}}
 				</div>
+
+				{{#awards.0}}
+				<div class="col-md-12">
+					<h2 class="oswald-font"><span class="fa fa-star"></span>&nbsp; Awards and Certifications</h3>
+					
+					{{#awards}}
+					<div class="row item">
+						<div class="col-xs-2 text-right">{{{date}}}</div>
+						<div class="item-detail col-xs-10">
+							<h3>
+								{{title}} &bull; <span class="company">{{awarder}}</span>
+							</h3>
+							<p class="text-muted text-justify">{{summary}}</p>
+							<ul>
+            					{{#highlights}}
+								<li class="text-justify">{{.}}</li>
+              					{{/highlights}}
+							</ul>
+						</div>
+					</div>
+					
+					{{/awards}}
+				</div>
+				{{/awards.0}}
+
 				{{#skills.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2>
-					<hr>
+					
 					<div>
 						{{#skills}}
 							<h4> {{name}} </h4>
@@ -176,7 +222,7 @@
 							{{#keywords}}
 								<span class="badge" style="background-color : #67809F;padding: 0.5em 0.5em 5px 0.5em;margin: 0 0 5px 0;">{{.}}</span> 
 							{{/keywords}}
-							<hr>
+							
 						{{/skills}}
 					</div>
 				</div>
@@ -184,7 +230,7 @@
 				{{#volunteer.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h3>
-					<hr>
+					
 					<div>
 						{{#volunteer}}
 							<div class="item-detail">
@@ -204,7 +250,7 @@
 								<li>{{.}}</li>
               					{{/highlights}}
 							</ul>
-							<hr>
+							
 						{{/volunteer}}
 					</div>
 				</div>
@@ -212,12 +258,12 @@
 				{{#languages.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-language"></span>&nbsp; Languages</h2>
-					<hr>
+					
 					<div>
 						{{#languages}}
 							<h4> {{language}} </h4>
-							<h5><b>{{fluency}}</b></h5>
-							<hr>
+							<h5>{{fluency}}</h5>
+							
 						{{/languages}}
 					</div>
 				</div>
@@ -225,7 +271,7 @@
 				{{#interests.0}}
 				<div class="col-md-12">
 					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
-					<hr>
+					
 					<div class="col-md-10">
 						<ul>
 							{{#interests}}
@@ -239,7 +285,7 @@
 								</ul></li>
 							{{/interests}}
 						</ul>
-						<hr>
+						
 					</div>
 				</div>
 				{{/interests.0}}

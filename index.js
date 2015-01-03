@@ -18,7 +18,7 @@ function render (resumeObject) {
 	}
 
 	var humanizeDate = function (datestr) {
-		return moment(datestr).format("MMM YYYY");
+		return moment(datestr).format("MMM YYYY").replace(' ', '&nbsp;');
 	}
 
 	var processDates = function (node) {
@@ -28,12 +28,14 @@ function render (resumeObject) {
 		else {
 			node.endDate = humanizeDate(node.endDate);
 		}
-		node.startDate = humanizeDate(node.startDate);
+		if (node.startDate) node.startDate = humanizeDate(node.startDate);
+		if (node.date) node.date = humanizeDate(node.date);
 	};
 
 	_.each(resumeObject.work, processDates);
 	_.each(resumeObject.education, processDates);
 	_.each(resumeObject.volunteer, processDates);
+	_.each(resumeObject.awards, processDates);
 
 	var locs = [];
 	if (resumeObject.basics.location) {
