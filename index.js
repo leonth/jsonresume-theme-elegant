@@ -17,6 +17,11 @@ function render (resumeObject) {
 		});
 	}
 
+	// email munging to avoid spammers
+	if (resumeObject.basics && resumeObject.basics.email) {
+		resumeObject.basics.email = '<span>' + resumeObject.basics.email.split('').join('</span><span>') + '</span>';
+	}
+
 	var humanizeDate = function (datestr) {
 		return moment(datestr).format("MMM YYYY").replace(' ', '&nbsp;');
 	}

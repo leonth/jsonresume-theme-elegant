@@ -127,7 +127,7 @@
 					<p class="location text-right col-xs-6">
 						{{#basics.email}}
 						<span class="fa fa-envelope"></span>
-						{{basics.email}}
+						{{{basics.email}}}
 						{{/basics.email}}
 						{{#basics.phone}}
 						<br>
