@@ -112,35 +112,36 @@
 				<div class="col-md-12 section">
 					<h1 class="name oswald-font">{{basics.name}}</h1>
 					
-					<p class="location text col-xs-6">
+					<div class="location text col-xs-6">
 						{{#basics._humanized_location}}
-						<span class="fa fa-location-arrow"></span>
+						<span class="fa fa-location-arrow"></span>&nbsp;
 						{{basics._humanized_location}}
 						<br>
 						{{/basics._humanized_location}}
+						{{#basics.email}}
+						<span class="fa fa-envelope"></span>&nbsp;
+						{{{basics.email}}}
+						<br>
+						{{/basics.email}}
+						{{#basics.phone}}
+						<span class="fa fa-phone"></span>&nbsp;
+						{{basics.phone}}
+						<br>
+						{{/basics.phone}}
+						{{#basics.website}}
+						<span class="fa fa-rss-square"></span>&nbsp;
+						<a target="_blank" href="{{basics.website}}">{{basics.website}}</a>
+						<br>
+						{{/basics.website}}
+					</div>
+
+					<div class="location text-right col-xs-6">
 						<span class="social-links-wrapper">
 							{{#basics.profiles}}
 							<a href="{{url}}" target="_blank">{{network}}</a>&nbsp;&nbsp;
 							{{/basics.profiles}}
 						</span>
-					</p>
-					<p class="location text-right col-xs-6">
-						{{#basics.email}}
-						<span class="fa fa-envelope"></span>
-						{{{basics.email}}}
-						{{/basics.email}}
-						{{#basics.phone}}
-						<br>
-						<span class="fa fa-phone"></span>
-						{{basics.phone}}
-						{{/basics.phone}}
-						{{#basics.website}}
-						<br>
-						<span class="fa fa-rss-square"></span>
-						<a target="_blank" href="{{basics.website}}">{{basics.website}}</a>
-						{{/basics.website}}
-						<br>
-					</p>
+					</div>
 				</div>
 
 				{{#basics.summary}}
