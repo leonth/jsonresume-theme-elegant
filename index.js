@@ -4,19 +4,7 @@ var Mustache = require('mustache');
 var _ = require('underscore');
 var moment = require('moment');
 
-function hasPersonalEmail(resumeObject) {
-	return (resumeObject.bio && resumeObject.bio.email && resumeObject.bio.email.personal);
-}
-
 function render (resumeObject) {
-	if (hasPersonalEmail(resumeObject)) {
-		resumeObject.bio.gravatar = gravatar.url(resumeObject.bio.email.personal, {
-			s: '100',
-			r: 'pg',
-			d: 'mm'
-		});
-	}
-
 	// email munging to avoid spammers
 	if (resumeObject.basics && resumeObject.basics.email) {
 		resumeObject.basics.email = '<span>' + resumeObject.basics.email.split('').join('</span><span>') + '</span>';
