@@ -78,9 +78,17 @@
 				border-bottom: 1px solid #eee;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
+				page-break-inside: avoid;
 			}
 
+			/*.section {
+				page-break-inside: avoid;
+			}*/
+
 			@media print {
+				@page {
+					margin: 0.75cm 0.5cm;
+				}
 				a[href]:after {
 					content:"";
 				}
@@ -92,13 +100,16 @@
 					margin-bottom: 0px;
 					padding-bottom: 5px;
 				}
+				.social-links-wrapper {
+					display: none;
+				}
 			}
 		</style>
 	</head>
 	
 	<body>
 		<div class="container">
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h1 class="name oswald-font">{{basics.name}}</h1>
 					
 					<p class="location text col-xs-6">
@@ -133,7 +144,7 @@
 				</div>
 
 				{{#basics.summary}}
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					
 					<p class="summary">
 						<sup class="fa fa-quote-left"></sup>
@@ -143,8 +154,8 @@
 				</div>
 				{{/basics.summary}}
 
-				<div class="col-md-12">
-					<h2 class="oswald-font"><span class="fa fa-briefcase"></span>&nbsp; Work</h3>
+				<div class="col-md-12 section">
+					<h2 class="oswald-font"><span class="fa fa-briefcase"></span>&nbsp; Work</h2>
 					
 					{{#work}}
 					<div class="row item">
@@ -166,7 +177,7 @@
 					{{/work}}
 				</div>
 
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2>
 					
 					{{#education}}
@@ -188,8 +199,8 @@
 				</div>
 
 				{{#awards.0}}
-				<div class="col-md-12">
-					<h2 class="oswald-font"><span class="fa fa-star"></span>&nbsp; Awards and Certifications</h3>
+				<div class="col-md-12 section">
+					<h2 class="oswald-font"><span class="fa fa-star"></span>&nbsp; Awards and Certifications</h2>
 					
 					{{#awards}}
 					<div class="row item">
@@ -212,7 +223,7 @@
 				{{/awards.0}}
 
 				{{#skills.0}}
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2>
 					
 					<div class="row">
@@ -229,7 +240,7 @@
 				</div>
 				{{/skills.0}}
 				{{#volunteer.0}}
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h3>
 					
 					<div>
@@ -257,7 +268,7 @@
 				</div>
 				{{/volunteer.0}}
 				{{#languages.0}}
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h2 class="oswald-font"><span class="fa fa-language"></span>&nbsp; Languages</h2>
 					<div class="row">
 					{{#languages}}
@@ -269,8 +280,9 @@
 					</div>
 				</div>
 				{{/languages.0}}
+
 				{{#interests.0}}
-				<div class="col-md-12">
+				<div class="col-md-12 section">
 					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
 					
 					<div class="col-md-10">
