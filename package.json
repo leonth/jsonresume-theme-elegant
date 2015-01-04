@@ -1,32 +1,30 @@
 {
-  "name": "jsonresume-theme-elegant_sargefork",
-  "version": "0.0.3",
-  "description": "Fork of Elegant Fork theme for jsonresume",
+  "name": "jsonresume-theme-elegant-leonth",
+  "version": "1.0.0",
+  "description": "Fork of Elegant theme for jsonresume",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iammac360/jsonresume-theme-elegant"
+    "url": "https://github.com/leonth/jsonresume-theme-elegant"
   },
   "keywords": [
     "jsonresume",
     "theme",
-    "elegant_fork",
-    "elegant_sargefork"
+    "elegant_fork"
   ],
-  "author": "Mark Sargento <marksargento.00@gmail.com>",
+  "author": "Leontius Adhika Pradhana <leontius@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iammac360/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/leonth/jsonresume-theme-elegant/issues"
   },
-  "homepage": "https://github.com/iammac360/jsonresume-theme-elegant",
+  "homepage": "https://github.com/leonth/jsonresume-theme-elegant",
   "dependencies": {
-    "resume-schema": "0.0.11",
-    "gravatar": "^1.0.6",
+    "moment": "^2.8.4",
     "mustache": "^0.8.2",
-    "tarball-extract": "0.0.3",
-    "underscore": "^1.6.0"
+    "underscore": "^1.7.0",
+    "resume-schema": "^0.0.11"
   }
 }
