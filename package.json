@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-elegant-leonth",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fork of Elegant theme for jsonresume",
   "main": "index.js",
   "scripts": {

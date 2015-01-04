@@ -131,11 +131,11 @@
 					</div>
 
 					<div class="location col-xs-6">
-						{{#basics.email}}
+						{{#basics._munged_email}}
 						<span class="fa fa-envelope"></span>&nbsp;
-						{{{basics.email}}}
+						{{{basics._munged_email}}}
 						<br>
-						{{/basics.email}}
+						{{/basics._munged_email}}
 
 						{{#basics.website}}
 						<span class="fa fa-rss-square"></span>&nbsp;
