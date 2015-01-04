@@ -55,8 +55,8 @@
 			}
 			
 			.summary {
-				font-family: "Pt mono";
 				font-size: 1.2em;
+				margin-top: 2em;
 			}
 			
 			.wip {
@@ -155,9 +155,9 @@
 				<div class="row section">
 					
 					<p class="summary">
-						<sup class="fa fa-quote-left"></sup>
+						<span class="fa fa-quote-left"></span>&nbsp;
 						{{basics.summary}}
-						<sup class="fa fa-quote-right"></sup>
+						&nbsp;<span class="fa fa-quote-right"></span>
 					</p>
 				</div>
 				{{/basics.summary}}
@@ -256,11 +256,11 @@
 							<div class="item-detail">
 								<h3>
 									{{#website}}<a target="_blank" href="{{website}}">
-										@{{/website}}{{organization}} 
+										{{/website}}{{organization}} 
 									{{#website}}</a>{{/website}}
 								</h3>
 								{{#summary}}<p class="text-muted">{{summary}}</p>{{/summary}}
-								<h5>{{startDate}}{{#endDate}} &ndash; {{endDate}}{{/endDate}}</h5>
+								<h5>{{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}</h5>
 								<h4>
 									{{#position}}<span>{{position}}</span>{{/position}}
 								</h4>
