@@ -1,24 +1,26 @@
 {
   "awards": [
     {
+      "awarder": "Singapore Pharmacy Council",
+      "date": "2013-03-25",
+      "title": "Pharmacy Practising Certificate"
+    },
+    {
       "awarder": "Pan Malayan",
       "date": "2012-06-01",
+      "summary": "",
       "title": "Pan-Malayan Entrepreneurship Prize for Best Pharmaceutical Marketing Project"
     },
     {
       "awarder": "Ministry of Foreign Affairs, Singapore",
       "date": "2008-06-01",
-      "title": "Singapore Scholarship for Bachelor\u2019s Degree in Pharmacy"
-    },
-    {
-      "awarder": "Indonesia Information & Communication Technology Award",
-      "date": "2007-11-01",
-      "summary": "The project was an implementation of an informatics contest management / judging system, featuring online submission of source codes, compilation, and grading against predefined input/output scenarios.",
-      "title": "Winner, Student Project Category"
+      "summary": "The full coverage scholarship was awarded to 7 scholars from Indonesia in 2008.",
+      "title": "Singapore Scholarship for Bachelor\u2019s Degree"
     },
     {
       "awarder": "Indonesian National Science Olympiad, Informatics Category",
       "date": "2005-09-01",
+      "summary": "",
       "title": "Silver Medallist"
     }
   ],
@@ -51,20 +53,13 @@
     },
     {
       "area": "Pharmacy",
+      "courses": [
+        "During Undergraduate Research Opportunities Programme in Science (UROPS), I developed a novel feature selection technique for cancer classification using Support Vector Machine (SVM)."
+      ],
       "endDate": "2012-08-01",
       "institution": "National University of Singapore",
       "startDate": "2008-08-01",
       "studyType": "Bachelor of Science (Pharmacy) (Honours)"
-    }
-  ],
-  "languages": [
-    {
-      "fluency": "Fluent",
-      "language": "English"
-    },
-    {
-      "fluency": "Native speaker",
-      "language": "Indonesian"
     }
   ],
   "skills": [
@@ -75,8 +70,6 @@
         "PHP",
         "Javascript",
         "SQL",
-        "HTML",
-        "CSS",
         "C",
         "Pascal"
       ],
@@ -92,7 +85,9 @@
         "pandas Python Data Analysis Library",
         "Mercurial",
         "Git",
-        "Docker"
+        "Docker",
+        "HTML",
+        "CSS"
       ],
       "name": "Software Technologies"
     }
@@ -101,13 +96,13 @@
     {
       "company": "Jurong Health Services",
       "highlights": [
-        "As Subject Matter Expert for pharmacy on implementation of the new integrated Electronic Medical Record, I work closely with stakeholders inside and outside pharmacy to define requirements, map workflows, produce requisite clinical and non-clinical content, and drive integration efforts with other systems.",
-        "Manages enhancements, bug fixes, and testing of the Electronic Medical Record at Alexandra Hospital.",
+        "As Subject Matter Expert for pharmacy on implementation of the new integrated EMR, I work closely with stakeholders inside and outside pharmacy to define requirements, map workflows, produce requisite clinical and non-clinical content, and drive integration efforts with other systems.",
+        "Maintains data stewardship and manages enhancements, bug fixes, and testing of the EMR at Alexandra Hospital.",
         "Extracts data and performs analyses that drive business decisions and policy making of the department."
       ],
       "position": "Pharmacist (IT Portfolio)",
       "startDate": "2013-03-01",
-      "summary": "I partake in the transitioning from legacy IT systems of the 400-bed Alexandra Hospital to modern systems of 700-bed Ng Teng Fong General Hospital and 400-bed Jurong Community Hospital. The new hospitals feature an integrated Electronic Medical Record across all care areas and Closed-Loop Medication Management where every dose of drugs is barcoded and scanned before administration.",
+      "summary": "I partake in the implementation of clinical IT systems for 700-bed Ng Teng Fong General Hospital and 400-bed Jurong Community Hospital. The new hospitals feature an integrated Electronic Medical Record (EMR) across all care areas and Closed-Loop Medication Management where every dose of drug is barcoded and scanned before administration.",
       "website": "http://juronghealth.com.sg/"
     },
     {
@@ -119,39 +114,28 @@
       "website": "http://juronghealth.com.sg/"
     },
     {
-      "company": "Teamie",
-      "endDate": "2011-07-01",
-      "highlights": [
-        "Initiated and oversaw usage of Mercurial version control system for the engineering team."
-      ],
-      "position": "Software Developer Intern",
-      "startDate": "2011-04-01",
-      "summary": "Developed modules the Drupal-based core product, a cloud-based collaborative learning platform.",
-      "website": "https://theteamie.com/"
+      "company": "NUH-NKF Children's Kidney Centre, National University Hospital",
+      "endDate": "2012-07-01",
+      "position": "Software Developer (Freelance)",
+      "startDate": "2011-12-01",
+      "summary": "Implemented an SMS medication compliance system used for research. The application sends text messages to patients' phones to remind them to take medications and tracks replies to indicate compliance.",
+      "website": "http://www.nuh.com.sg"
     },
     {
-      "company": "National University Hospital",
+      "company": "Teamie",
       "endDate": "2011-07-01",
-      "position": "Pharmacy intern",
-      "startDate": "2011-05-01",
-      "summary": "Training for pharmacy practising certificate.",
-      "website": "http://www.nuh.com.sg/"
+      "position": "Software Developer Intern",
+      "startDate": "2011-04-01",
+      "summary": "Developed modules the Drupal-based core product, a cloud-based collaborative learning platform. Initiated and oversaw usage of Mercurial version control system for the engineering team.",
+      "website": "https://theteamie.com/"
     },
     {
       "company": "Google",
       "endDate": "2010-07-01",
-      "position": "Google Summer of Code software developer",
+      "position": "Google Summer of Code Software Developer",
       "startDate": "2010-05-01",
       "summary": "Selected to receive grant from Google among 1026 students globally to work on the project Reactome-Wikipathways Round-trip Converter which was successfully completed, enabling rapid interoperabilty between the organisations.",
       "website": "https://developers.google.com/open-source/soc/"
-    },
-    {
-      "company": "NTUC Unity Healthcare",
-      "endDate": "2010-07-01",
-      "position": "Pharmacy intern",
-      "startDate": "2010-05-01",
-      "summary": "Training for pharmacy practising certificate.",
-      "website": "http://www.ntuchealth.com.sg"
     }
   ]
 }
