@@ -5,13 +5,12 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{{basics.name}}</title>
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" media="all">
 		<style>
 			body {
 				font-family: 'Lato';
 				background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/snow.png");
-	        	font-size: 'small'
 			}
 
 			.oswald-font {
@@ -78,16 +77,20 @@
 				border-bottom: 1px solid #eee;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
+			}
+
+			.item, .no-break-inside {
 				page-break-inside: avoid;
 			}
 
-			/*.section {
-				page-break-inside: avoid;
-			}*/
+			.section {
+				orphans: 10;
+				widows: 10;
+			}
 
 			@media print {
 				@page {
-					margin: 0.75cm 0.5cm;
+					margin: 0.75cm 0.75cm 3cm 0.75cm;
 				}
 				a[href]:after {
 					content:"";
@@ -109,43 +112,47 @@
 	
 	<body>
 		<div class="container">
-				<div class="col-md-12 section">
-					<h1 class="name oswald-font">{{basics.name}}</h1>
+				<div class="row section">
+					<div class="col-xs-12"><h1 class="name oswald-font">{{basics.name}}</h1></div>
 					
-					<div class="location text col-xs-6">
+					<div class="location col-xs-6">
 						{{#basics._humanized_location}}
-						<span class="fa fa-location-arrow"></span>&nbsp;
+						<span class="fa fa-map-marker"></span>&nbsp;
 						{{basics._humanized_location}}
 						<br>
 						{{/basics._humanized_location}}
-						{{#basics.email}}
-						<span class="fa fa-envelope"></span>&nbsp;
-						{{{basics.email}}}
-						<br>
-						{{/basics.email}}
+						
 						{{#basics.phone}}
 						<span class="fa fa-phone"></span>&nbsp;
 						{{basics.phone}}
 						<br>
 						{{/basics.phone}}
+						
+					</div>
+
+					<div class="location col-xs-6">
+						{{#basics.email}}
+						<span class="fa fa-envelope"></span>&nbsp;
+						{{{basics.email}}}
+						<br>
+						{{/basics.email}}
+
 						{{#basics.website}}
 						<span class="fa fa-rss-square"></span>&nbsp;
 						<a target="_blank" href="{{basics.website}}">{{basics.website}}</a>
 						<br>
 						{{/basics.website}}
-					</div>
 
-					<div class="location text-right col-xs-6">
 						<span class="social-links-wrapper">
 							{{#basics.profiles}}
-							<a href="{{url}}" target="_blank">{{network}}</a>&nbsp;&nbsp;
+							<a href="{{url}}" target="_blank"><span class="fa fa-{{_icon}}"></span>&nbsp;{{network}}</a> &nbsp;
 							{{/basics.profiles}}
 						</span>
 					</div>
 				</div>
 
 				{{#basics.summary}}
-				<div class="col-md-12 section">
+				<div class="row section">
 					
 					<p class="summary">
 						<sup class="fa fa-quote-left"></sup>
@@ -155,8 +162,8 @@
 				</div>
 				{{/basics.summary}}
 
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-briefcase"></span>&nbsp; Work</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-briefcase"></span>&nbsp; Work</h2></div>
 					
 					{{#work}}
 					<div class="row item">
@@ -178,8 +185,8 @@
 					{{/work}}
 				</div>
 
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-university"></span>&nbsp; Education</h2></div>
 					
 					{{#education}}
 					<div class="row item">
@@ -200,8 +207,8 @@
 				</div>
 
 				{{#awards.0}}
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-star"></span>&nbsp; Awards and Certifications</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-star"></span>&nbsp; Awards and Certifications</h2></div>
 					
 					{{#awards}}
 					<div class="row item">
@@ -224,12 +231,12 @@
 				{{/awards.0}}
 
 				{{#skills.0}}
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-mortar-board"></span>&nbsp; Skills</h2></div>
 					
 					<div class="row">
 						{{#skills}}
-						<div class="col-xs-6">
+						<div class="col-xs-6 no-break-inside">
 							<h4> {{name}} </h4>
 							<h5><b>{{level}}</b></h5>
 							{{#keywords}}
@@ -241,8 +248,8 @@
 				</div>
 				{{/skills.0}}
 				{{#volunteer.0}}
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h3>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-group"></span>&nbsp; Volunteerism</h2></div>
 					
 					<div>
 						{{#volunteer}}
@@ -269,11 +276,11 @@
 				</div>
 				{{/volunteer.0}}
 				{{#languages.0}}
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-language"></span>&nbsp; Languages</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-language"></span>&nbsp; Languages</h2></div>
 					<div class="row">
 					{{#languages}}
-						<div class="col-xs-6">
+						<div class="col-xs-6 no-break-inside">
 							<h4> {{language}} </h4>
 							<h5>{{fluency}}</h5>
 						</div>
@@ -283,8 +290,8 @@
 				{{/languages.0}}
 
 				{{#interests.0}}
-				<div class="col-md-12 section">
-					<h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2>
+				<div class="row section">
+					<div class="col-xs-12"><h2 class="oswald-font"><span class="fa fa-book"></span>&nbsp; Hobbies</h2></div>
 					
 					<div class="col-md-10">
 						<ul>

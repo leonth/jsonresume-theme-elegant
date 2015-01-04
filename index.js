@@ -10,6 +10,11 @@ function render (resumeObject) {
 		resumeObject.basics.email = '<span>' + resumeObject.basics.email.split('').join('</span><span>') + '</span>';
 	}
 
+	// social network icons
+	_.each(resumeObject.basics.profiles, function (i) {
+		i._icon = i.network.toLowerCase();
+	});
+
 	var humanizeDate = function (datestr) {
 		return moment(datestr).format("MMM YYYY").replace(' ', '&nbsp;');
 	}
