@@ -16,7 +16,7 @@ function render (resumeObject) {
 
 	var humanizeDate = function (datestr) {
 		return moment(datestr).format("MMM YYYY").replace(' ', '&nbsp;');
-	}
+	};
 
 	var processDates = function (node) {
 		if (!node.endDate) {
@@ -44,9 +44,8 @@ function render (resumeObject) {
 	}
 	resumeObject.basics._humanized_location = locs.join(', ');
 
-	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
-	var resumeHTML = Mustache.render(theme, resumeObject);
-	return resumeHTML;
+	var theme = fs.readFileSync(__dirname + '/resume.html', 'utf8');
+	return Mustache.render(theme, resumeObject);
 }
 
 module.exports = { render: render };
