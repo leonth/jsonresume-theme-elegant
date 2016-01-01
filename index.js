@@ -4,7 +4,9 @@ var _ = require('underscore');
 var moment = require('moment');
 
 
-moment.locale("fr");
+moment.locale("fr", {
+	monthsShort : "jan._fév._mars_avr._mai_juin_juil._août_sep._oct._nov._déc.".split("_")
+});
 
 function render (resumeObject) {
 	// email munging to avoid spammers
