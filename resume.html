@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{basics.name}}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
     <style>
         body {
             font-size: 10px;
@@ -69,7 +69,11 @@
             vertical-align: middle;
         }
 
-        .item-detail .company .work-summary {
+        .item-detail .company {
+            font-size: 0.85em;
+        }
+
+        .work-summary {
             font-size: 0.85em;
         }
 
@@ -128,6 +132,16 @@
 
             .badge {
                 font-weight: normal;
+                padding: 2px 6px;
+                border: 1px solid #000;
+                color: #fff;
+                background-color: #333;
+            }
+
+            .keywords {
+                background-color : #67809F;
+                padding: 0.5em 0.5em 5px 0.5em;
+                margin: 0 0 5px 2px;
             }
 
             .item {
@@ -281,7 +295,7 @@
 
     {{#skills.0}}
     <div class="row section">
-        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-mortar-board"></span>&nbsp; Compétences</h2>
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-mortar-board"></span>&nbsp; Informatique</h2>
         </div>
 
         <div class="row">
