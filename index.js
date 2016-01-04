@@ -3,11 +3,7 @@ var Mustache = require('mustache');
 var _ = require('underscore');
 var moment = require('moment');
 
-
-moment.locale("fr", {
-	months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
-	monthsShort : "jan._fév._mar._avr._mai_juin_juil._aoû._sep._oct._nov._déc.".split("_"),
-});
+moment.locale("fr");
 
 function render (resumeObject) {
 	// email munging to avoid spammers
