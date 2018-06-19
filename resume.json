@@ -1,141 +1,163 @@
 {
-  "awards": [
+  "basics": {
+    "name": "Laëtitia Cardet",
+    "label": "Gestionnaire paie et ADP",
+    "picture": "",
+    "email": "laetitia.cardet@hotmail.fr",
+    "phone": "0633130263",
+    "summary": "Gestionnaire Paie et ADP",
+    "location": {
+      "address": "15 rue Maurice Payret Dortail",
+      "postalCode": "92150",
+      "city": "Suresnes"
+    }
+  },
+  "work": [
     {
-      "awarder": "Singapore Pharmacy Council",
-      "date": "2013-03-25",
-      "title": "Pharmacy Practising Certificate"
+      "company": "Oscaro.com - Gennevelliers (92)",
+      "position": "Responsable Paie et ADP",
+      "website": "http://oscaro.com",
+      "startDate": "2015-04",
+      "endDate": "",
+      "highlights": [
+        "Établir et contrôler les paies et les déclarations sociales",
+        "Coordonner et planifier la réalisation des paies des différentes entités du groupe",
+        "Manager l'équipe paie et ADP, garantir l'assistance, le conseil et la montée en compétence",
+        "Établir les indicateurs de suivi RH et les bilans obligatoires pour les partenaires sociaux",
+        "Contribuer au projet d'internalisation de la paie"
+      ]
     },
     {
-      "awarder": "Pan Malayan",
-      "date": "2012-06-01",
-      "summary": "",
-      "title": "Pan-Malayan Entrepreneurship Prize for Best Pharmaceutical Marketing Project"
+      "company": "Oscaro.com - Gennevelliers (92)",
+      "position": "Gestionnaire Paie et ADP",
+      "website": "",
+      "startDate": "2012-11",
+      "endDate": "2015-03",
+      "highlights": [
+        "Recueillir, calculer et saisir les éléments variables de paie",
+        "Vérifier les bulletins établis par le prestataire et contrôler les charges sociales",
+        "Établir les documents liés aux fins de contrats",
+        "Établir les attestations de salaires et suivre les dossiers prévoyance",
+        "Assurer le conseil auprès des opérationnels RH",
+        "Participer au projet de changement de prestataire paie pour une externalisation partielle",
+        "Assurer l'établissement du bilan social, du bilan temps partiel..."
+      ]
     },
     {
-      "awarder": "Ministry of Foreign Affairs, Singapore",
-      "date": "2008-06-01",
-      "summary": "The full coverage scholarship was awarded to 7 scholars from Indonesia in 2008.",
-      "title": "Singapore Scholarship for Bachelor\u2019s Degree"
+      "company": "Lido de Paris, Sodexo - Boulogne (92)",
+      "position": "Gestionnaire Paie",
+      "website": "http://lido.fr",
+      "startDate": "2012-01",
+      "endDate": "2012-10",
+      "highlights": [
+        "Assurer l'activité paie pour l'ensemble de la population et gérer les intermittents du spectacle",
+        "Établir les soldes de tout compte et les attestations Pôle Emploi pour les intermittents du spectacle",
+        "Étude et suivi des dossiers de subrogation et de prévoyance"
+      ]
     },
     {
-      "awarder": "Indonesian National Science Olympiad, Informatics Category",
-      "date": "2005-09-01",
-      "summary": "",
-      "title": "Silver Medallist"
+      "company": "Conseil Général des Yvelines - Versailles (78)",
+      "position": "Gestionnaire Paie",
+      "website": "https://www.yvelines.fr",
+      "startDate": "2010-09",
+      "endDate": "2012-01",
+      "highlights": [
+        "Saisir et procéder à la vérification et à la correction des éléments variables de paie",
+        "Déclarer les charges sociales",
+        "Étudier les droits à l'allocation d'Aide au Retour à l'Emploi et indemniser les agents",
+        "Gérer les contrats d'apprentissage, les contrats uniques d'insertion et les dossiers de retraite",
+        "Créer et mettre en place une amélioration continue des outils et processus"
+      ]
+    },
+    {
+      "company": "Conseil Général des Yvelines - Versailles (78)",
+      "position": "Assistante Paie",
+      "website": "https://www.yvelines.fr",
+      "startDate": "2009-09",
+      "endDate": "2010-08",
+      "summary": "Contrat d'apprentissage",
+      "highlights": []
+    },
+    {
+      "company": "Centre Hospitalier F. Baclesse - Caen (14)",
+      "position": "Assistante en Ressources Humaines",
+      "website": "http://www.baclesse.fr",
+      "summary": "Stage universitaire",
+      "startDate": "2009",
+      "endDate": "2009",
+      "highlights": []
+    },
+    {
+      "company": "E. Leclerc - Ifs (14)",
+      "position": "Aide comptable",
+      "website": "http://www.e-leclerc.com/ifs",
+      "summary": "Emploi saisonnier - Vacances d'été",
+      "startDate": "2007",
+      "endDate": "2008",
+      "highlights": []
     }
   ],
-  "basics": {
-    "email": "leontius@gmail.com",
-    "location": {
-      "city": "Singapore"
-    },
-    "name": "Leontius Adhika Pradhana",
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "url": "http://sg.linkedin.com/in/leontius/"
-      },
-      {
-        "network": "GitHub",
-        "url": "https://github.com/leonth",
-        "username": "leonth"
-      }
-    ],
-    "website": "http://leontius.net"
-  },
   "education": [
     {
-      "area": "Gateway to Health Informatics: an AMIA-OHSU i10x10 Course",
-      "endDate": "2014-07-14",
-      "institution": "American Medical Informatics Association",
-      "startDate": "2014-03-10",
-      "studyType": "Postgraduate Certificate"
+      "institution": "Université de Saint Quentin en Yvelines",
+      "studyType": "Obtention Licence Professionelle",
+      "area": "Gestion des Ressources Humaines",
+      "startDate": "2010",
+      "endDate": "2010",
+      "courses": []
     },
     {
-      "area": "Pharmacy",
-      "courses": [
-        "During Undergraduate Research Opportunities Programme in Science (UROPS), I developed a novel feature selection technique for cancer classification using Support Vector Machine (SVM)."
-      ],
-      "endDate": "2012-08-01",
-      "institution": "National University of Singapore",
-      "startDate": "2008-08-01",
-      "studyType": "Bachelor of Science (Pharmacy) (Honours)"
+      "institution": "Université de Caen",
+      "area": "Gestion des Entreprises et des Administrations, option Ressources Humaines",
+      "studyType": "Obtention DUT",
+      "startDate": "2009",
+      "endDate": "2009",
+      "courses": []
+    },
+    {
+      "institution": "Université de Caen",
+      "studyType": "Préparation 1ère année Licence",
+      "area": "Économie",
+      "startDate": "2007",
+      "endDate": "2007",
+      "courses": []
+    },
+    {
+      "institution": "Lycée Charles-François Lebrun, Coutances",
+      "studyType": "Obtention Baccalauréat",
+      "area": "Économique et Sociale",
+      "startDate": "2006",
+      "endDate": "2006",
+      "courses": []
     }
   ],
   "skills": [
     {
+      "name": "Logiciels de paie",
       "keywords": [
-        "Python",
-        "Java",
-        "PHP",
-        "Javascript",
-        "SQL",
-        "C",
-        "Pascal"
-      ],
-      "name": "Programming Languages"
+        "ADP",
+        "Premium RH - E-Paye",
+        "CEGID",
+        "CIRIL"
+      ]
     },
     {
+      "name": "Microsoft Office",
       "keywords": [
-        "Drupal",
-        "WordPress",
-        "Android",
-        "Apache Spark",
-        "IPython",
-        "pandas Python Data Analysis Library",
-        "Mercurial",
-        "Git",
-        "Docker",
-        "HTML",
-        "CSS"
-      ],
-      "name": "Software Technologies"
+        "Excel",
+        "Word",
+        "Powerpoint"
+      ]
     }
   ],
-  "work": [
+  "languages": [
     {
-      "company": "Jurong Health Services",
-      "highlights": [
-        "As Subject Matter Expert for pharmacy on implementation of the new integrated EMR, I work closely with stakeholders inside and outside pharmacy to define requirements, map workflows, produce requisite clinical and non-clinical content, and drive integration efforts with other systems.",
-        "Maintains data stewardship and manages enhancements, bug fixes, and testing of the EMR at Alexandra Hospital.",
-        "Extracts data and performs analyses that drive business decisions and policy making of the department."
-      ],
-      "position": "Pharmacist (IT Portfolio)",
-      "startDate": "2013-03-01",
-      "summary": "I partake in the implementation of clinical IT systems for 700-bed Ng Teng Fong General Hospital and 400-bed Jurong Community Hospital. The new hospitals feature an integrated Electronic Medical Record (EMR) across all care areas and Closed-Loop Medication Management where every dose of drug is barcoded and scanned before administration.",
-      "website": "http://juronghealth.com.sg/"
+      "language": "Anglais",
+      "fluency": "Niveau universitaire"
     },
     {
-      "company": "Jurong Health Services",
-      "endDate": "2013-03-01",
-      "position": "Pre-registration Pharmacist",
-      "startDate": "2012-06-01",
-      "summary": "Training for pharmacy practising certificate.",
-      "website": "http://juronghealth.com.sg/"
-    },
-    {
-      "company": "NUH-NKF Children's Kidney Centre, National University Hospital",
-      "endDate": "2012-07-01",
-      "position": "Software Developer (Freelance)",
-      "startDate": "2011-12-01",
-      "summary": "Implemented an SMS medication compliance system used for research. The application sends text messages to patients' phones to remind them to take medications and tracks replies to indicate compliance.",
-      "website": "http://www.nuh.com.sg"
-    },
-    {
-      "company": "Teamie",
-      "endDate": "2011-07-01",
-      "position": "Software Developer Intern",
-      "startDate": "2011-04-01",
-      "summary": "Developed modules the Drupal-based core product, a cloud-based collaborative learning platform. Initiated and oversaw usage of Mercurial version control system for the engineering team.",
-      "website": "https://theteamie.com/"
-    },
-    {
-      "company": "Google",
-      "endDate": "2010-07-01",
-      "position": "Google Summer of Code Software Developer",
-      "startDate": "2010-05-01",
-      "summary": "Selected to receive grant from Google among 1026 students globally to work on the project Reactome-Wikipathways Round-trip Converter which was successfully completed, enabling rapid interoperabilty between the organisations.",
-      "website": "https://developers.google.com/open-source/soc/"
+      "language": "Allemand",
+      "fluency": "Niveau universitaire"
     }
   ]
 }

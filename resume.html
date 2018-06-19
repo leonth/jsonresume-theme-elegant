@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{basics.name}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <style>
+        body {
+            font-size: 10px;
+            line-height: 1.42857143;
+            font-family: 'Lato';
+        }
+
+        .oswald-font {
+            font-family: 'oswald';
+            vertical-align: bottom;
+        }
+
+        .name {
+            text-transform: uppercase;
+            margin-bottom: 0.35em;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .link-github {
+            color: #454545;
+        }
+
+        .link-github:hover {
+            color: black;
+        }
+
+        .link-twitter {
+            color: #33CCFF;
+        }
+
+        .social-link {
+            margin-left: 5px;
+        }
+
+        .social-link:first-child {
+            margin-left: 0;
+        }
+
+        .link-blog {
+            color: rgb(243, 111, 36);
+        }
+
+        .link-blog:hover {
+            color: rgb(211, 97, 32);
+        }
+
+        .wip {
+            position: absolute;
+            right: 0;
+        }
+
+        .item-detail h3 {
+            margin-top: 0;
+            vertical-align: middle;
+        }
+
+        .item-detail .company {
+            font-size: 0.85em;
+            color: #67809F !important;
+        }
+
+        .work-summary {
+            font-size: 0.85em;
+        }
+
+        .item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+
+        .col-xs-2.text-right {
+            padding-left: 8px !important;
+            padding-right: 8px!important;
+        }
+
+        .item, .no-break-inside {
+            page-break-inside: avoid;
+        }
+
+        .section {
+            orphans: 10;
+            widows: 10;
+        }
+
+        .badge {
+            font-size: 11px;
+        }
+
+        .text-muted {
+            color: #777 !important;
+        }
+        .text-justify {
+            text-align: justify !important;
+        }
+
+        .keywords {
+            background-color : #67809F !important;
+            padding: 0.5em 0.5em 5px 0.5em !important;
+            margin: 0 0 5px 2px !important;
+        }
+
+        h1 {
+            font-size: 20px; /*line-height: 30px;*/
+        }
+
+        h2 {
+            font-size: 15px; /*line-height: 30px;*/
+        }
+
+        h3 {
+            font-size: 13px; /*line-height: 30px;*/
+        }
+
+        h4 {
+            font-size: 11px; /*line-height: 15px;*/
+        }
+
+        h5 {
+            font-size: 10px; /*line-height: 15px;*/
+        }
+
+        h1, h2, h3, h4, h5 {
+            margin-top: 0;
+        }
+
+        @media print {
+            @page {
+                margin: 0.75cm 0.75cm 3cm 0.75cm;
+            }
+
+            a[href]:after {
+                content: "";
+            }
+
+            .badge {
+                font-weight: normal;
+                color: #fff !important; /*default*/
+            }
+
+            .item {
+                margin-bottom: 7px;
+            }
+
+            .social-links-wrapper {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="name oswald-font">{{basics.name}}</h2></div>
+
+        <div class="location col-xs-6">
+            {{#basics._humanized_location}}
+            <span class="fa fa-map-marker"></span>&nbsp;
+            {{basics._humanized_location}}
+            <br>
+            {{/basics._humanized_location}}
+
+            {{#basics.phone}}
+            <span class="fa fa-phone"></span>&nbsp;
+            {{basics.phone}}
+            <br>
+            {{/basics.phone}}
+
+            {{#basics._munged_email}}
+            <span class="fa fa-envelope"></span>&nbsp;
+            {{{basics._munged_email}}}
+            <br>
+            {{/basics._munged_email}}
+        </div>
+
+        <div class="location col-xs-6">
+            {{#basics.website}}
+            <span class="fa fa-rss-square"></span>&nbsp;
+            <a target="_blank" href="{{basics.website}}">{{basics.website}}</a>
+            <br>
+            {{/basics.website}}
+
+            <span class="social-links-wrapper">
+                {{#basics.profiles}}
+                <a href="{{url}}" target="_blank"><span class="fa fa-{{_icon}}"></span>&nbsp;{{network}}</a> &nbsp;
+                {{/basics.profiles}}
+            </span>
+        </div>
+    </div>
+
+    {{#basics.summary}}
+    <div class="row section">
+        <p>
+        <h1 class="text-center oswald-font">
+            {{basics.summary}}
+        </h1>
+        </p>
+    </div>
+    {{/basics.summary}}
+
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-briefcase"></span>&nbsp; Expérience
+            Professionnelle</h2></div>
+
+        {{#work}}
+        <div class="row item">
+            <div class="col-xs-2 text-right">
+                {{#date}}
+                    {{date}}
+                {{/date}}
+                {{^date}}
+                    {{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}
+                {{/date}}
+            </div>
+            <div class="item-detail col-xs-10">
+                <h3>
+                    {{position}} &bull; <a target="_blank" href="{{website}}" class="company">{{company}}</a>
+                    {{#summary}}
+                    <span class="text-muted text-justify work-summary">&bull; {{summary}}</span>
+                    {{/summary}}
+                </h3>
+                <ul>
+                    {{#highlights}}
+                    <li class="text-justify">{{.}}</li>
+                    {{/highlights}}
+                </ul>
+            </div>
+
+        </div>
+
+        {{/work}}
+    </div>
+
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-university"></span>&nbsp; Formation</h2></div>
+
+        {{#education}}
+        <div class="row item">
+            <div class="col-xs-2 text-right">
+                {{#date}}
+                    {{date}}
+                {{/date}}
+                {{^date}}
+                    {{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}
+                {{/date}}
+            </div>
+            <div class="item-detail col-xs-10">
+                <h3>{{studyType}} {{area}}</h3>
+                <h4>{{institution}}</h4>
+                {{#gpa}}<h5>{{gpa}}</h5>{{/gpa}}
+                <ul>
+                    {{#courses}}
+                    <li>{{.}}</li>
+                    {{/courses}}
+                </ul>
+            </div>
+
+        </div>
+        {{/education}}
+    </div>
+
+    {{#awards.0}}
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-star"></span>&nbsp; Awards and Certifications
+        </h2></div>
+
+        {{#awards}}
+        <div class="row item">
+            <div class="col-xs-2 text-right">{{{date}}}</div>
+            <div class="item-detail col-xs-10">
+                <h3>
+                    {{title}} &bull; <span class="company">{{awarder}}</span>
+                </h3>
+                <p class="text-muted text-justify">{{summary}}</p>
+                <ul>
+                    {{#highlights}}
+                    <li class="text-justify">{{.}}</li>
+                    {{/highlights}}
+                </ul>
+            </div>
+        </div>
+
+        {{/awards}}
+    </div>
+    {{/awards.0}}
+
+    {{#skills.0}}
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-mortar-board"></span>&nbsp; Informatique</h2>
+        </div>
+
+        <div class="row">
+            {{#skills}}
+            <div class="col-xs-6 no-break-inside">
+                <h4>{{name}} &nbsp; {{#keywords}}
+                    <span class="badge keywords">{{.}}</span>
+                    {{/keywords}}
+                </h4>
+            </div>
+            {{/skills}}
+        </div>
+    </div>
+    {{/skills.0}}
+    {{#volunteer.0}}
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-group"></span>&nbsp; Volunteerism</h2></div>
+
+        <div>
+            {{#volunteer}}
+            <div class="item-detail">
+                <h3>
+                    {{#website}}<a target="_blank" href="{{website}}">
+                    {{/website}}{{organization}}
+                    {{#website}}</a>{{/website}}
+                </h3>
+                {{#summary}}<p class="text-muted">{{summary}}</p>{{/summary}}
+                <h5>{{{startDate}}}{{#endDate}} &ndash; {{{endDate}}}{{/endDate}}</h5>
+                <h4>
+                    {{#position}}<span>{{position}}</span>{{/position}}
+                </h4>
+            </div>
+            <ul>
+                {{#highlights}}
+                <li>{{.}}</li>
+                {{/highlights}}
+            </ul>
+
+            {{/volunteer}}
+        </div>
+    </div>
+    {{/volunteer.0}}
+    {{#languages.0}}
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-language"></span>&nbsp; Langues</h2></div>
+        <div class="row">
+            {{#languages}}
+            <div class="col-xs-6 no-break-inside">
+                <h4>{{language}} &bull; {{fluency}}</h4>
+            </div>
+            {{/languages}}
+        </div>
+    </div>
+    {{/languages.0}}
+
+    {{#interests.0}}
+    <div class="row section">
+        <div class="col-xs-12"><h2 class="oswald-font title"><span class="fa fa-book"></span>&nbsp; Hobbies</h2></div>
+
+        <div class="col-md-10">
+            <ul>
+                {{#interests}}
+                <li>
+                    <div class="item-detail">
+                        <h5>{{name}}</h5>
+                    </div>
+                    <ul>
+                        {{#keywords}}
+                        <li>{{.}}</li>
+                        {{/keywords}}
+                    </ul>
+                </li>
+                {{/interests}}
+            </ul>
+
+        </div>
+    </div>
+    {{/interests.0}}
+</div>
+</div>
+
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</body>
+</html>
